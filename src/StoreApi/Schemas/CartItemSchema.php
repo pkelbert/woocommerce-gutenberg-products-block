@@ -64,7 +64,7 @@ class CartItemSchema extends ProductSchema {
 				'readonly'    => true,
 			],
 			'quantity_limit'      => [
-				'description' => __( 'The maximum quantity than can be added to the cart at once.', 'woo-gutenberg-products-block' ),
+				'description' => __( 'The maximum quantity that can be added to the cart at once.', 'woo-gutenberg-products-block' ),
 				'type'        => 'integer',
 				'context'     => [ 'view', 'edit' ],
 				'readonly'    => true,
