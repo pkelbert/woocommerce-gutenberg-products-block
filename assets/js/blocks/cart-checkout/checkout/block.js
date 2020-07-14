@@ -166,7 +166,7 @@ const Checkout = ( { attributes, scrollToTop } ) => {
 			showAllValidationErrors();
 			scrollToTop( { focusableSelector: 'input:invalid' } );
 		}
-	}, [ hasErrorsToDisplay ] );
+	}, [ hasErrorsToDisplay, showAllValidationErrors, scrollToTop ] );
 
 	if ( ! isEditor && ! hasOrder ) {
 		return <CheckoutOrderError />;
