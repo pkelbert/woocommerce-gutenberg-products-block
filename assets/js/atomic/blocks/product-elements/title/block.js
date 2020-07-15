@@ -8,12 +8,12 @@ import {
 	useInnerBlockLayoutContext,
 	useProductDataContext,
 } from '@woocommerce/shared-context';
+import { withProductDataContext } from '@woocommerce/shared-hocs';
 
 /**
  * Internal dependencies
  */
 import './style.scss';
-import withProductDataContext from '../shared/with-product-data-context';
 
 /**
  * Product Title Block Component.
@@ -24,11 +24,7 @@ import withProductDataContext from '../shared/with-product-data-context';
  * @param {boolean} [props.productLink]  Whether or not to display a link to the product page.
  * @return {*} The component.
  */
-export const Block = ( {
-	className,
-	headingLevel = 2,
-	productLink = true,
-} ) => {
+const Block = ( { className, headingLevel = 2, productLink = true } ) => {
 	const { parentClassName } = useInnerBlockLayoutContext();
 	const { product } = useProductDataContext();
 	const TagName = `h${ headingLevel }`;

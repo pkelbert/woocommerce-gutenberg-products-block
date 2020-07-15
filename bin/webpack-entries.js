@@ -10,6 +10,7 @@ const stable = {
 		wcBlocksData: './assets/js/data/index.js',
 		wcBlocksMiddleware: './assets/js/middleware/index.js',
 		wcSharedContext: './assets/js/shared/context/index.js',
+		wcSharedHocs: './assets/js/shared/hocs/index.js',
 	},
 	main: {
 		// Shared blocks code

@@ -81,7 +81,11 @@ const getCoreConfig = ( options = {} ) => {
 					);
 				},
 			} ),
-			new DependencyExtractionWebpackPlugin( { injectPolyfill: true } ),
+			new DependencyExtractionWebpackPlugin( {
+				injectPolyfill: true,
+				requestToExternal,
+				requestToHandle,
+			} ),
 			new CreateFileWebpack( {
 				path: './',
 				// file name
