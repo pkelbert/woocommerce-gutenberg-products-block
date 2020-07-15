@@ -135,7 +135,6 @@ const Price = ( { currency, price, regularPrice } ) => {
 
 Block.propTypes = {
 	className: PropTypes.string,
-	product: PropTypes.object,
 };
 
 export default withProductDataContext( Block );
