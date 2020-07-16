@@ -36,7 +36,10 @@ const Block = ( { className, headingLevel = 2, productLink = true } ) => {
 				className={ classnames(
 					className,
 					'wc-block-components-product-title',
-					`${ parentClassName }__product-title`
+					'wc-block-components-product-title--placeholder',
+					{
+						[ `${ parentClassName }__product-title` ]: parentClassName,
+					}
 				) }
 			/>
 		);
@@ -50,7 +53,9 @@ const Block = ( { className, headingLevel = 2, productLink = true } ) => {
 			className={ classnames(
 				className,
 				'wc-block-components-product-title',
-				`${ parentClassName }__product-title`
+				{
+					[ `${ parentClassName }__product-title` ]: parentClassName,
+				}
 			) }
 		>
 			{ productLink ? (

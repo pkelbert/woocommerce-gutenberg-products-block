@@ -34,7 +34,9 @@ const Block = ( { className } ) => {
 					className,
 					'price',
 					'wc-block-components-product-price',
-					`${ parentClassName }__product-price`
+					{
+						[ `${ parentClassName }__product-price` ]: parentClassName,
+					}
 				) }
 			/>
 		);
@@ -49,7 +51,9 @@ const Block = ( { className } ) => {
 				className,
 				'price',
 				'wc-block-components-product-price',
-				`${ parentClassName }__product-price`
+				{
+					[ `${ parentClassName }__product-price` ]: parentClassName,
+				}
 			) }
 		>
 			{ hasPriceRange( prices ) ? (
@@ -84,7 +88,9 @@ const PriceRange = ( { currency, minAmount, maxAmount } ) => {
 		<span
 			className={ classnames(
 				'wc-block-components-product-price__value',
-				`${ parentClassName }__product-price__value`
+				{
+					[ `${ parentClassName }__product-price__value` ]: parentClassName,
+				}
 			) }
 		>
 			<FormattedMonetaryAmount
@@ -109,7 +115,9 @@ const Price = ( { currency, price, regularPrice } ) => {
 				<del
 					className={ classnames(
 						'wc-block-components-product-price__regular',
-						`${ parentClassName }__product-price__regular`
+						{
+							[ `${ parentClassName }__product-price__regular` ]: parentClassName,
+						}
 					) }
 				>
 					<FormattedMonetaryAmount
@@ -121,7 +129,9 @@ const Price = ( { currency, price, regularPrice } ) => {
 			<span
 				className={ classnames(
 					'wc-block-components-product-price__value',
-					`${ parentClassName }__product-price__value`
+					{
+						[ `${ parentClassName }__product-price__value` ]: parentClassName,
+					}
 				) }
 			>
 				<FormattedMonetaryAmount
