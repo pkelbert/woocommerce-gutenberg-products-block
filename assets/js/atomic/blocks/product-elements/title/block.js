@@ -22,15 +22,9 @@ import './style.scss';
  * @param {string}  [props.className]    CSS Class name for the component.
  * @param {number}  [props.headingLevel] Heading level (h1, h2 etc)
  * @param {boolean} [props.productLink]  Whether or not to display a link to the product page.
- * @param {Element|null} [props.placeholder] Placeholder content should nothing be rendered.
  * @return {*} The component.
  */
-const Block = ( {
-	className,
-	headingLevel = 2,
-	productLink = true,
-	placeholder = null,
-} ) => {
+const Block = ( { className, headingLevel = 2, productLink = true } ) => {
 	const { parentClassName } = useInnerBlockLayoutContext();
 	const { product } = useProductDataContext();
 	const TagName = `h${ headingLevel }`;
@@ -42,10 +36,7 @@ const Block = ( {
 				className={ classnames(
 					className,
 					'wc-block-components-product-title',
-					'wc-block-components-product-title--placeholder',
-					{
-						[ `${ parentClassName }__product-title` ]: parentClassName,
-					}
+					`${ parentClassName }__product-title`
 				) }
 			/>
 		);
@@ -53,19 +44,13 @@ const Block = ( {
 
 	const productName = decodeEntities( product.name );
 
-	if ( ! productName ) {
-		return placeholder;
-	}
-
 	return (
 		// @ts-ignore
 		<TagName
 			className={ classnames(
 				className,
 				'wc-block-components-product-title',
-				{
-					[ `${ parentClassName }__product-title` ]: parentClassName,
-				}
+				`${ parentClassName }__product-title`
 			) }
 		>
 			{ productLink ? (
