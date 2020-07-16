@@ -36,7 +36,6 @@ const Block = ( { className, headingLevel = 2, productLink = true } ) => {
 				className={ classnames(
 					className,
 					'wc-block-components-product-title',
-					'wc-block-components-product-title--placeholder',
 					{
 						[ `${ parentClassName }__product-title` ]: parentClassName,
 					}
